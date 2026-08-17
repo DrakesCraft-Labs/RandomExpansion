@@ -1,12 +1,12 @@
 package me.lucasgithuber.randomexpansion;
 
-import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
-import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
-import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
-import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.config.Config;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
+import com.github.drakescraft_labs.slimefun4.api.SlimefunAddon;
+import com.github.drakescraft_labs.slimefun4.api.items.ItemGroup;
+import com.github.drakescraft_labs.slimefun4.api.items.SlimefunItemStack;
+import com.github.drakescraft_labs.slimefun4.api.recipes.RecipeType;
+import com.github.drakescraft_labs.slimefun4.implementation.SlimefunItems;
+import com.github.drakescraft_labs.slimefun4.libraries.dough.config.Config;
+import com.github.drakescraft_labs.slimefun4.libraries.dough.items.CustomItemStack;
 import me.lucasgithuber.randomexpansion.Resources.*;
 import me.lucasgithuber.randomexpansion.gear.MonsterBoots;
 import me.lucasgithuber.randomexpansion.gear.MonsterChest;
@@ -27,7 +27,7 @@ public class RandomExpansion extends JavaPlugin implements SlimefunAddon {
         if (cfg.getBoolean("options.auto-update")) {
             // You could start an Auto-Updater for example
         }
-        ItemStack itemGroupItem = new CustomItemStack(Material.COMMAND_BLOCK, "&4随机拓展", "", "&a> 单击打开");
+        ItemStack itemGroupItem = new CustomItemStack(Material.COMMAND_BLOCK, "&4Expansión aleatoria", "", "&a> Haga clic para abrir");
 
         NamespacedKey itemGroupId = new NamespacedKey(this, "RANDOMEXPANSION");
         ItemGroup itemGroup = new ItemGroup(itemGroupId, itemGroupItem);
@@ -35,7 +35,7 @@ public class RandomExpansion extends JavaPlugin implements SlimefunAddon {
         /*
          *reinforced membrane
          */
-        SlimefunItemStack REINFORCED_PHANTOM_MEMBRANE = new SlimefunItemStack("REINFORCED_PHANTOM_MEMBRANE", Material.PHANTOM_MEMBRANE, "&b&l强化幽灵膜 ", "&7&n用于制造怪兽盔甲的抗性膜");
+        SlimefunItemStack REINFORCED_PHANTOM_MEMBRANE = new SlimefunItemStack("REINFORCED_PHANTOM_MEMBRANE", Material.PHANTOM_MEMBRANE, "&b&lPelícula fantasma reforzada ", "&7&nPelícula resistente utilizada para crear armaduras de monstruos.");
 
         ItemStack[] recipe = {SlimefunItems.HARDENED_METAL_INGOT, SlimefunItems.REINFORCED_PLATE, SlimefunItems.HARDENED_METAL_INGOT,
                 SlimefunItems.REINFORCED_PLATE, new ItemStack(Material.PHANTOM_MEMBRANE), SlimefunItems.REINFORCED_PLATE,
@@ -45,7 +45,7 @@ public class RandomExpansion extends JavaPlugin implements SlimefunAddon {
          /*
          *monster helmet i guess
          */
-        SlimefunItemStack MONSTER_HELMET = new SlimefunItemStack("MONSTER_HELMET", Material.CHAINMAIL_HELMET, "&8怪兽头盔", "&8+25%恐吓并提供夜视能力");
+        SlimefunItemStack MONSTER_HELMET = new SlimefunItemStack("MONSTER_HELMET", Material.CHAINMAIL_HELMET, "&8casco de monstruo", "&8+25%Intimidar y proporcionar visión nocturna.");
 
         ItemStack[] MONSTER_HELMET_RECIPE = {SlimefunItems.SYNTHETIC_SAPPHIRE, REINFORCED_PHANTOM_MEMBRANE , SlimefunItems.SYNTHETIC_SAPPHIRE,
                 REINFORCED_PHANTOM_MEMBRANE, null, REINFORCED_PHANTOM_MEMBRANE,
@@ -56,7 +56,7 @@ public class RandomExpansion extends JavaPlugin implements SlimefunAddon {
          *monster chestplate
          */
 
-        SlimefunItemStack MONSTER_CHEST = new SlimefunItemStack("MONSTER_CHESTPLATE", Material.CHAINMAIL_CHESTPLATE, "&8怪兽胸甲", "&8+25%恐吓");
+        SlimefunItemStack MONSTER_CHEST = new SlimefunItemStack("MONSTER_CHESTPLATE", Material.CHAINMAIL_CHESTPLATE, "&8Coraza de monstruo", "&8+25%intimidación");
 
         ItemStack[] MONSTER_CHEST_RECIPE = {REINFORCED_PHANTOM_MEMBRANE, null, REINFORCED_PHANTOM_MEMBRANE,
                 REINFORCED_PHANTOM_MEMBRANE, SlimefunItems.SYNTHETIC_SAPPHIRE, REINFORCED_PHANTOM_MEMBRANE,
@@ -67,7 +67,7 @@ public class RandomExpansion extends JavaPlugin implements SlimefunAddon {
          *monster leggings yikes
          */
 
-        SlimefunItemStack MONSTER_LEGGINGS = new SlimefunItemStack("MONSTER_LEGGINGS", Material.CHAINMAIL_LEGGINGS, "&8怪兽护腿", "&8+25%恐吓");
+        SlimefunItemStack MONSTER_LEGGINGS = new SlimefunItemStack("MONSTER_LEGGINGS", Material.CHAINMAIL_LEGGINGS, "&8Leggings de monstruo", "&8+25%intimidación");
 
         ItemStack[] MONSTER_LEGGINGS_RECIPE = {SlimefunItems.SYNTHETIC_SAPPHIRE, REINFORCED_PHANTOM_MEMBRANE, SlimefunItems.SYNTHETIC_SAPPHIRE,
                 REINFORCED_PHANTOM_MEMBRANE, null, REINFORCED_PHANTOM_MEMBRANE,
@@ -78,7 +78,7 @@ public class RandomExpansion extends JavaPlugin implements SlimefunAddon {
          *monster boots '-' what did u expect
          */
 
-        SlimefunItemStack MONSTER_BOOTS = new SlimefunItemStack("MONSTER_BOOTS", Material.CHAINMAIL_BOOTS, "&8怪兽靴子", "&8+25%恐吓");
+        SlimefunItemStack MONSTER_BOOTS = new SlimefunItemStack("MONSTER_BOOTS", Material.CHAINMAIL_BOOTS, "&8botas de monstruo", "&8+25%intimidación");
 
         ItemStack[] MONSTER_BOOTS_RECIPE = {SlimefunItems.SYNTHETIC_SAPPHIRE, null, SlimefunItems.SYNTHETIC_SAPPHIRE,
                 REINFORCED_PHANTOM_MEMBRANE, null, REINFORCED_PHANTOM_MEMBRANE,
@@ -91,7 +91,7 @@ public class RandomExpansion extends JavaPlugin implements SlimefunAddon {
          */
 
 
-        SlimefunItemStack ANIMAL_DUST= new SlimefunItemStack("ANIMAL_DUST", Material.REDSTONE, "&4禽兽粉", "&4一种神秘的肉粉");
+        SlimefunItemStack ANIMAL_DUST= new SlimefunItemStack("ANIMAL_DUST", Material.REDSTONE, "&4harina de animales", "&4Un misterioso polvo de carne");
 
         ItemStack[] ANIMAL_DUST_RECIPE = {new ItemStack(Material.MUTTON), null, null, null ,null ,null ,null ,null ,null};
 
@@ -101,7 +101,7 @@ public class RandomExpansion extends JavaPlugin implements SlimefunAddon {
         *Animal ingot
          */
 
-        SlimefunItemStack ANIMAL_INGOT= new SlimefunItemStack("ANIMAL_INGOT", Material.NETHER_BRICK, "&4禽兽锭", "&4一种神秘的肉锭");
+        SlimefunItemStack ANIMAL_INGOT= new SlimefunItemStack("ANIMAL_INGOT", Material.NETHER_BRICK, "&4Tableta Bestia", "&4Un pastel de carne misterioso");
 
         ItemStack[] ANIMAL_INGOT_RECIPE = {ANIMAL_DUST, null, null, null ,null ,null ,null ,null ,null};
 
@@ -110,7 +110,7 @@ public class RandomExpansion extends JavaPlugin implements SlimefunAddon {
         *Monster dust
          */
 
-        SlimefunItemStack MONSTER_DUST= new SlimefunItemStack("MONSTER_DUST", Material.GUNPOWDER, "&c腐肉粉", "");
+        SlimefunItemStack MONSTER_DUST= new SlimefunItemStack("MONSTER_DUST", Material.GUNPOWDER, "&ccarne podrida en polvo", "");
 
         ItemStack[] MONSTER_DUST_RECIPE = {new ItemStack(Material.ROTTEN_FLESH), null, null, null ,null ,null ,null ,null ,null};
 
@@ -121,7 +121,7 @@ public class RandomExpansion extends JavaPlugin implements SlimefunAddon {
          */
 
 
-        SlimefunItemStack DARK_HEART= new SlimefunItemStack("DARK_HEART", Material.MAGMA_CREAM, "&4黑暗之心", "&7包含各种生物的精华...");
+        SlimefunItemStack DARK_HEART= new SlimefunItemStack("DARK_HEART", Material.MAGMA_CREAM, "&4corazón de oscuridad", "&7Contiene la esencia de varios seres vivos....");
 
         ItemStack[] DARK_HEART_RECIPE = {MONSTER_DUST, SlimefunItems.ESSENCE_OF_AFTERLIFE, MONSTER_DUST, SlimefunItems.VILLAGER_RUNE, ANIMAL_INGOT, SlimefunItems.VILLAGER_RUNE, MONSTER_DUST, SlimefunItems.VILLAGER_RUNE, MONSTER_DUST};
 
