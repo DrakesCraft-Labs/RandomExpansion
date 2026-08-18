@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/DrakesCraft-Labs/RandomExpansion/master/docs/banner.svg" width="100%" alt="RANDOMEXPANSION Animated Banner" />
+  <img src="https://raw.githubusercontent.com/DrakesCraft-Labs/RandomExpansion/master/banner.svg" width="100%" alt="RANDOMEXPANSION Animated Banner" />
 </p>
 
 # RandomExpansion
